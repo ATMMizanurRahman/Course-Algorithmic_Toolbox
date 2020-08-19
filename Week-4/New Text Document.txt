@@ -1,0 +1,94 @@
+1. Linear Search : Iterative Approach
+
+LS(A,low,high,key){
+
+ if(low>high){
+ return not found
+}
+
+ if(A[low]==key){
+ found
+ }
+
+ LS(A,low+1,high,key)
+
+}
+
+2. Binary Search : Input BS(A,low,high,key) --> Sorted array thakbe input e..
+
+BS(A,low,high,key){
+if low>high:
+ return low-1
+
+mid = low+(high-low)/2
+
+if key=A[mid]
+  return A[mid]
+else if key<A[mid]
+  return BS(A,low,mid-1,key)
+else
+  return BS(A,mid+1,high,key)
+}
+
+
+3. Polynomial Multiplication:
+
+ Mult(A,B,n){
+ prod--> Array[2n-1]
+ for i=0 to 2n-2
+ prod[i]=0
+ for i=0 to n-1 
+  for j=0 to n-1
+    prod[i+j]=prod[i+j]+A[i]*B[j]
+ return product
+}
+
+
+Karatsuba Algo ase, jeta ami buji nai
+
+
+## Sorting Problem :
+
+1. Selection Sort : O(n^2) (min ber kore 1st index diye swap kora hoi)
+   
+   for i=1 to n
+    minindex=i
+    for j=i+1 to n
+     if A[j]<A[minindex]
+       minindex=j
+        swap(A[i],A[minindex])
+
+2. merger sort : O(n logn) (Equal half kore alada alada sort kra hoi) (Etai sob theke faster. Onno Kisu faster hote pare but, se khetre array somporke kisiu jana lagbe)
+     
+    if n=1:
+     return A
+     m= lower_bound(n/2)
+     B=mergeSort(A[1..m])
+     C=mergeSort(A[m+1..n])
+     A=merge(B,C)
+     return A
+
+Merge ta kivabe hoi?????????
+
+merge(B[1..p],C[1..q]){ 
+ D= Size(B+C)
+ while B and C both are non empty
+   b=first element of B , c=first element of C
+   if b<=c
+   move b from B to the end of D
+   else
+   move c from C to the end of D
+ rest of the B and C end of the D
+}
+
+
+
+
+3. Quick Sort: O(nlong n) but worst case e eta O(n^2) hoite pare
+  
+   if l>=r:
+     return
+   m=partition(A,l,r)
+   {A[m] is in the final position}
+   QuickSort(A,l,m-1)
+   QuickSort(A,m+1,r)

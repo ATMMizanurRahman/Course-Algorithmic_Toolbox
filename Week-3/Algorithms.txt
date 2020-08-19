@@ -1,0 +1,11 @@
+1.Greedy choice is to choose many as possible number of largest coins.
+
+2.The key points here are selecting max index from value/weight. Add that value to result and clean that value in original list.
+
+4. Easy
+
+5.The greedy choice is selecting the minimum right endpoint. Then remove all segments that contains that endpoint. Keep choosing minimum right endpoint and removing segments.
+
+6. The greedy choice is choosing smallest number from 1, 2, …Sum them as S. If your smallest number is larger than (input_number— S)/ 2. You found the last number. Why? please take a look at assignment details[2].
+
+7.This problem has many edge cases. Base on the pseudocode above, the main point is checking “digit ≥ maxDigit” in the right way. Because it’s not only digit anymore, you have to make sure that 12 and 2 => 221, 22 and 225 => 22522….To do that, the strategy of comparing two number is:

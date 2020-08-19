@@ -1,0 +1,24 @@
+1. Coing Change : 
+
+Greedy : Boro ta nibe ar Money-Coin (Greedy wrong dei. 20-20 optimal. 25-10-5 opt na)
+
+2. A T G T T A T A
+   A T C G T C C 
+
+Alignment score : Match =1, insert/delete= -1 mismatch =0
+
+Input e Insert/delete ar mismatch er value deo thakbe. amake emon ekta string banate hbe jeta score max korbe.
+
+3. Ekhane Indel=0, mismathc=0 dhorle eta longest common substring hoye jabe(LCS)
+
+4. Edit Distance --> Min num of opetations to convert a str to other str (Ekhane mis=0 indel=0.5)
+
+ Ekhnne insert,delete,msmatch ke +1 dhore. match ke ora 0 dhore. minimum nite hbe
+
+ dhori a[1,i-1] b[1,j-1] match khaise. taile a[i],b[j] ekhane 4 case hoite pare
+
+ D(i,j)=MIN ( D(i,j-1)+1 , D(i-1,j)+1 , D(i-1,j-1)+1( 3 tai if A[i]!=B[j] ) , D(i-1,j-1)if(A[i]=B[j]) )
+
+ Ar Surute D(1,0)=1 D(2,0)=2 samevabe D(0,1)=1 , D(0,2)=2 emne hoite hbe..
+
+5.   

@@ -1,0 +1,7 @@
+1. Fn= 1/root(5) * ( ((1+root(5))/2)^n - ((1-root(5))/2)^n  )
+
+2. Fibo recursive krle onk besi time lage.
+
+3. Fibo take Array diya krte hbe
+
+4. 
